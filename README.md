@@ -1,6 +1,6 @@
 # Paper-Screening-and-Downloader
 
- - https://img.shields.io/badge/any_text-you_like-blue-
+![Version Badge](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
 
 论文筛选与下载器 基于py
