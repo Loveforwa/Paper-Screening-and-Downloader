@@ -21,12 +21,13 @@ if web_response.status_code != 200:
 
 soup = BeautifulSoup(web_response.text, 'html.parser')
 paper_titles = [title.get_text(strip=True) for title in soup.find_all('strong')]
+#这里需要修改成你需要获得的网站资源
 if not paper_titles:
     print("未找到任何论文标题")
     exit()
 
 api_url = "https://api.siliconflow.cn/v1/chat/completions"
-api_key = "sk-gdbkmlqvvxllghthvnfkhnzcskbmofaascsbnldtzrpufvkl"
+api_key = "输入你自己的api"
 
 prompt = "你是一个专业的学术信息提取员,请从以下论文标题中筛选出30个与 三维生成模型 直接或者间接相关的标题，以列表形式(注意：格式要保持一致)返回:直接返回txt格式 不要markdown形式 不用附上任何理解 我只要符合三维生成模型的论文题目\n"
 for title in paper_titles:
